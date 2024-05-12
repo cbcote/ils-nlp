@@ -1,24 +1,9 @@
-<mxfile host="app.diagrams.net" modified="2024-05-12T14:51:59.717Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="LMVpMJkRbgsYrX9Yeakk" version="24.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-12T14:56:49.085Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="_Y4nY3PMSdZAMjEqzUu5" version="24.4.0" type="github">
   <diagram name="Page-1" id="eje4wcLzP92jvBpg3HmN">
     <mxGraphModel dx="2034" dy="1135" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-1" value="Table Detection" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="160" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-3" value="OCR" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-4" value="Detect header line" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="370" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-5" value="Table Line Items" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="450" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-6" value="Bounding Box" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="540" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="Lev6AH-UttUzAtVmkW1H-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lev6AH-UttUzAtVmkW1H-7" target="Lev6AH-UttUzAtVmkW1H-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -27,24 +12,6 @@
         </mxCell>
         <mxCell id="Lev6AH-UttUzAtVmkW1H-7" value="Table Structure Recognition" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="350" y="750" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-9" value="Feature Extraction" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-10" value="Edge-based features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="190" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-11" value="Texture-based features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="290" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-12" value="Region-based features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="400" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-13" value="Classifier Training" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Lev6AH-UttUzAtVmkW1H-14" value="Table Detection" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="480" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Lev6AH-UttUzAtVmkW1H-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lev6AH-UttUzAtVmkW1H-15" target="Lev6AH-UttUzAtVmkW1H-19">
           <mxGeometry relative="1" as="geometry" />
@@ -74,7 +41,7 @@
           <mxGeometry x="580" y="910" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Lev6AH-UttUzAtVmkW1H-19" value="# rows and columns" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="-10" y="1040" width="120" height="60" as="geometry" />
+          <mxGeometry x="-10" y="1090" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Lev6AH-UttUzAtVmkW1H-22" value="Distance between adjacent cells" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="140" y="1040" width="120" height="60" as="geometry" />
@@ -90,6 +57,60 @@
         </mxCell>
         <mxCell id="Lev6AH-UttUzAtVmkW1H-30" value="Presence of certain characters and symbols" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="720" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-33" value="Table Detection" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-34" value="OCR" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="1410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-35" value="Detect header line" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="1500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-36" value="Table Line Items" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="1580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-37" value="Bounding Box" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="1670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-38" value="Feature Extraction" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-39" value="Edge-based features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-40" value="Texture-based features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-41" value="Region-based features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-42" value="Classifier Training" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-43" value="Table Detection" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lev6AH-UttUzAtVmkW1H-44" target="Lev6AH-UttUzAtVmkW1H-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lev6AH-UttUzAtVmkW1H-44" target="Lev6AH-UttUzAtVmkW1H-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lev6AH-UttUzAtVmkW1H-44" target="Lev6AH-UttUzAtVmkW1H-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-44" value="Table Detection" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-46" value="Rule-Based" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-48" value="ML-Based" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lev6AH-UttUzAtVmkW1H-50" value="Deep-Learning Based" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="180" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
