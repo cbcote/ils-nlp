@@ -1,0 +1,37 @@
+version: 1
+disable_existing_loggers: False
+
+formatters:
+  simple:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  detailed:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s [%(filename)s:%(lineno)d]"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+  file_handler:
+    class: logging.FileHandler
+    level: INFO
+    formatter: detailed
+    filename: logs/application.log
+    mode: a
+  error_file_handler:
+    class: logging.FileHandler
+    level: ERROR
+    formatter: detailed
+    filename: logs/error.log
+    mode: a
+
+loggers:
+  my_module:
+    level: DEBUG
+    handlers: [console, file_handler]
+    propagate: no
+
+root:
+  level: DEBUG
+  handlers: [console, file_handler, error_file_handler]

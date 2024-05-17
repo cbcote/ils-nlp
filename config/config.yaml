@@ -1,0 +1,61 @@
+# config.yaml
+
+# Azure Configuration
+azure:
+  connection_string: "your_connection_string"
+  container_name: "your_container_name"
+
+# Data Ingestion Settings
+ingestion:
+  document_types:
+    - pdf
+    - docx
+  storage_path: "data/raw"
+
+# Preprocessing Settings
+preprocessing:
+  stopwords: "english"
+  lemmatization: true
+  normalization: true
+  remove_digits: true
+  remove_punctuation: true
+
+# Logging Configuration
+logging:
+  version: 1
+  disable_existing_loggers: False
+  formatters:
+    simple:
+      format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  handlers:
+    console:
+      class: logging.StreamHandler
+      formatter: simple
+      level: DEBUG
+  root:
+    handlers: [console]
+    level: DEBUG
+
+# Machine Learning Model Settings
+model:
+  model_path: "models/text_classification_model.pkl"
+  training_data_path: "data/processed/training_data.csv"
+  validation_data_path: "data/processed/validation_data.csv"
+  hyperparameters:
+    learning_rate: 0.01
+    batch_size: 32
+    epochs: 10
+
+# Database Configuration
+database:
+  host: "localhost"
+  port: 5432
+  username: "your_username"
+  password: "your_password"
+  database_name: "your_database"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
