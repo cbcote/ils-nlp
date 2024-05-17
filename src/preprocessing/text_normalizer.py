@@ -1,14 +1,21 @@
-import re
+# src/preprocessing/text_normalizer.py
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
-class TextCleaner:
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+class TextNormalizer:
     def __init__(self, config):
-        self.remove_digits = config['preprocessing'].get('remove_digits', True)
-        self.remove_punctuation = config['preprocessing'].get('remove_punctuation', True)
+        self.lemmatization = config['preprocessing'].get('lemmatization', True)
+        self.stopwords = set(stopwords.words(config['preprocessing'].get('stopwords', 'english')))
+        self.lemmatizer = WordNetLemmatizer()
 
-    def clean(self, text):
-        if self.remove_digits:
-            text = re.sub(r'\d+', '', text)
-        if self.remove_punctuation:
-            text = re.sub(r'[^\w\s]', '', text)
-        text = re.sub(r'\s+', ' ', text).strip()
-        return text.lower()
+    def normalize(self, text):
+        tokens = word_tokenize(text)
+        if self.lemmatization:
+            tokens = [self.lemmatizer.lemmatize(token) for token in tokens if token not in self.stopwords]
+        return ' '.join(tokens)
