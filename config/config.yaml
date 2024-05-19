@@ -16,11 +16,14 @@ ingestion:
 preprocessing:
   stopwords: "english"
   lemmatization: true
+  stemming: false # If both are set to true, lemmatization will be applied first
   normalization: true
   remove_digits: true
   remove_punctuation: true
   lowercase: true
   remove_stopwords: true
+  tokenization: true
+  custom_stopwords: ["custom_stopword_1", "custom_stopword_2"]
 
 # Logging Configuration
 logging:
