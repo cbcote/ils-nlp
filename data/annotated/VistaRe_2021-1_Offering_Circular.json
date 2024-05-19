@@ -1,0 +1,64 @@
+{
+    "document_id": "VistaRe_2021-1_Offering_Circular",
+    "metadata": {
+      "issuer": "Vista Re Ltd.",
+      "issuer_description": "Bermuda exempted company, registered as a special purpose insurer",
+      "series": "Series 2021-1 Class A Principal At-Risk Variable Rate Notes",
+      "maturity_date": "May 21, 2024",
+      "offering_price": "100% of the Original Principal Amount",
+      "issuance_date": "May 2021",
+      "ceding_reinsurer": "Vantage Risk Ltd.",
+      "ceding_reinsurer_description": "Provides property catastrophe reinsurance and specialty insurance"
+    },
+    "annotations": [
+      {
+        "label": "Issuer",
+        "text": "Vista Re Ltd.",
+        "start_offset": 0,
+        "end_offset": 12
+      },
+      {
+        "label": "Issuer Description",
+        "text": "Bermuda exempted company, registered as a special purpose insurer",
+        "start_offset": 14,
+        "end_offset": 83
+      },
+      {
+        "label": "Bond Series",
+        "text": "Series 2021-1 Class A Principal At-Risk Variable Rate Notes",
+        "start_offset": 118,
+        "end_offset": 170
+      },
+      {
+        "label": "Maturity Date",
+        "text": "May 21, 2024",
+        "start_offset": 175,
+        "end_offset": 186
+      },
+      {
+        "label": "Offering Price",
+        "text": "100% of the Original Principal Amount",
+        "start_offset": 191,
+        "end_offset": 226
+      },
+      {
+        "label": "Issuance Date",
+        "text": "May 2021",
+        "start_offset": 231,
+        "end_offset": 239
+      },
+      {
+        "label": "Ceding Reinsurer",
+        "text": "Vantage Risk Ltd.",
+        "start_offset": 244,
+        "end_offset": 261
+      },
+      {
+        "label": "Ceding Reinsurer Description",
+        "text": "Provides property catastrophe reinsurance and specialty insurance",
+        "start_offset": 263,
+        "end_offset": 323
+      }
+    ]
+  }
+  
