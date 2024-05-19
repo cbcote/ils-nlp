@@ -1,4 +1,3 @@
-# scripts/annotate_document.py
 import json
 import argparse
 from src.utils.config_loader import ConfigLoader
@@ -17,14 +16,14 @@ def main():
 
     # Initialize components
     text_extractor = TextExtractor()
-    text_cleaner = TextCleaner()
-    text_normalizer = TextNormalizer()
+    text_cleaner = TextCleaner(config)
+    text_normalizer = TextNormalizer(config)
     annotator = Annotator()
 
     # Extract, clean, and normalize text
     raw_text = text_extractor.extract_text(args.file)
-    cleaned_text = text_cleaner.clean_text(raw_text)
-    normalized_text = text_normalizer.normalize_text(cleaned_text)
+    cleaned_text = text_cleaner.clean(raw_text)
+    normalized_text = text_normalizer.normalize(cleaned_text)
 
     # Generate annotations
     annotations = annotator.generate_annotations(normalized_text)
