@@ -19,6 +19,8 @@ preprocessing:
   normalization: true
   remove_digits: true
   remove_punctuation: true
+  lowercase: true
+  remove_stopwords: true
 
 # Logging Configuration
 logging:
