@@ -11,5 +11,5 @@ class TextExtractor:
         Returns:
             Extracted text from the document
         """
-        parsed = parser.from_file(file_path)
-        return parsed["content"]
+        raw = parser.from_file(file_path)
+        return raw["content"]
