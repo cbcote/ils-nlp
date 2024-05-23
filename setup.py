@@ -42,9 +42,13 @@ setup(
     python_requires='>=3.7',
     entry_points={
         'console_scripts': [
-            'ingest-data=scripts.ingest_data:main',
-            'extract-text=scripts.extract_text:main',
-            'preprocess-text=scripts.preprocess_text:main',
+            'annotate_document=scripts.annotate_document:main',
+            'evaluate_model=scripts.evaluate_model:main',
+            'extract_text=scripts.extract_text:main',
+            'ingest_data=scripts.ingest_data:main',
+            'ingest_local_directory=scripts.ingest_local_directory:main',
+            'preprocess_text=scripts.preprocess_text:main',
+            'train_model=scripts.train_model:main',
         ],
     },
 )
