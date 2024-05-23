@@ -1,5 +1,6 @@
 # scripts/annotate_document.py
 import json
+import os
 import argparse
 from src.utils.logger import Logger
 from src.utils.config_loader import ConfigLoader
@@ -7,6 +8,13 @@ from src.ingestion.text_extractor import TextExtractor
 from src.preprocessing.text_cleaner import TextCleaner
 from src.preprocessing.text_normalizer import TextNormalizer
 from src.annotation.annotator import Annotator
+
+def save_to_file(data, path):
+    with open(path, 'w', encoding='utf-8') as f:
+        if isinstance(data, str):
+            f.write(data)
+        else:
+            json.dump(data, f, ensure_ascii=False, indent=4)
 
 def main():
     Logger.setup_logging()
@@ -29,30 +37,40 @@ def main():
         text_normalizer = TextNormalizer(config)
         annotator = Annotator()
 
-        # Extract, clean, and normalize text
+        # Extract text
         logger.info("Extracting text from the document")
         raw_text = text_extractor.extract_text(args.file)
+        extracted_path = os.path.join('data', 'extracted', f"{os.path.basename(args.file)}.txt")
+        save_to_file(raw_text, extracted_path)
+        logger.info(f"Extracted text saved to {extracted_path}")
 
+        # Clean text
         logger.info("Cleaning the extracted text")
         cleaned_text = text_cleaner.clean(raw_text)
+        cleaned_path = os.path.join('data', 'cleaned', f"{os.path.basename(args.file)}.txt")
+        save_to_file(cleaned_text, cleaned_path)
+        logger.info(f"Cleaned text saved to {cleaned_path}")
 
+        # Normalize text
         logger.info("Normalizing the cleaned text")
         normalized_text = text_normalizer.normalize(cleaned_text)
+        interim_path = os.path.join('data', 'interim', f"{os.path.basename(args.file)}.txt")
+        save_to_file(normalized_text, interim_path)
+        logger.info(f"Normalized text saved to {interim_path}")
 
         # Generate annotations
         logger.info("Generating annotations")
         annotations = annotator.generate_annotations(normalized_text)
 
         # Save annotations to JSON
-        document_id = args.file.split('/')[-1].split('.')[0]
+        document_id = os.path.basename(args.file).split('.')[0]
         annotation_data = {
             "document_id": document_id,
             "text": normalized_text,
             "annotations": [{"start": start, "end": end, "label": label} for start, end, label in annotations]
         }
-        output_path = f"data/annotated/{document_id}_annotations.json"
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(annotation_data, f, ensure_ascii=False, indent=4)
+        output_path = os.path.join('data', 'annotated', f"{document_id}_annotations.json")
+        save_to_file(annotation_data, output_path)
 
         logger.info(f"Annotations saved to {output_path}")
     
