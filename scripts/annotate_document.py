@@ -1,4 +1,3 @@
-# scripts/annotate_document.py
 import json
 import os
 import argparse
