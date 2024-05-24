@@ -1,3 +1,12 @@
+import os
+import sys
+import nltk
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Set the NLTK data path
+nltk.data.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '/data/nltk_data')))
+
 import json
 import os
 import argparse
