@@ -1,5 +1,3 @@
-# config.yaml
-
 # Azure Configuration
 azure:
   connection_string: "your_connection_string"
@@ -35,11 +33,23 @@ logging:
   handlers:
     console:
       class: logging.StreamHandler
-      formatter: simple
       level: DEBUG
+      formatter: simple
+      stream: ext://sys.stdout
+    file_handler:
+      class: logging.FileHandler
+      level: INFO
+      formatter: simple
+      filename: logs/application.log
+      mode: a
+  loggers:
+    my_module:
+      level: DEBUG
+      handlers: [console, file_handler]
+      propagate: no
   root:
-    handlers: [console]
     level: DEBUG
+    handlers: [console, file_handler]
 
 # Machine Learning Model Settings
 model:
