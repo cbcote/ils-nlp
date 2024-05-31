@@ -40,7 +40,7 @@ def main():
         logger.info("Configuration loaded successfully")
 
         # Initialize components
-        text_extractor = TextExtractor()
+        text_extractor = TextExtractor(config)
         text_cleaner = TextCleaner(config)
         text_normalizer = TextNormalizer(config)
         annotator = Annotator()
